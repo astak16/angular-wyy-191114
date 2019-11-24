@@ -14,8 +14,23 @@ export class HomeComponent implements OnInit {
 
   @ViewChild(NzCarouselComponent, { static: true }) private nzCarousel: NzCarouselComponent
   constructor(private homeServe: HomeService) {
+    this.getBanners()
+    this.getHotTags()
+    this.getPersonalizedSheetList()
+  }
+  private getBanners() {
     this.homeServe.getBanners().subscribe(banners => {
       this.banners = banners
+    })
+  }
+  private getHotTags() {
+    this.homeServe.getHotTags().subscribe(tags => {
+      // this.banners = banners
+    })
+  }
+  private getPersonalizedSheetList() {
+    this.homeServe.getPersonalSheetList().subscribe(sheets => {
+      // this.banners = banners
     })
   }
 
