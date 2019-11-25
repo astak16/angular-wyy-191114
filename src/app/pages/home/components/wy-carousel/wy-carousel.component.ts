@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewChild, TemplateRef, Input, Output, EventEmitter } from '@angular/core';
-import { ChangeDetectionStrategy } from '@angular/compiler/src/core'
+import { Component, OnInit, ViewChild, TemplateRef, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({

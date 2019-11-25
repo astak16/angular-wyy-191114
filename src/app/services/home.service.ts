@@ -22,6 +22,6 @@ export class HomeService {
     }))
   }
   getPersonalSheetList(): Observable<SongSheet[]> {
-    return this.http.get(this.url + 'personalized').pipe(map((result: { tags: SongSheet[] }) => result.tags.slice(0, 16)))
+    return this.http.get(this.url + 'personalized').pipe(map((res: { result: SongSheet[] }) => res.result.slice(0, 16)))
   }
 }
